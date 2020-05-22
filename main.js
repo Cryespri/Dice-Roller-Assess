@@ -8,7 +8,7 @@ let userInput = document.querySelector('#number-of-dice')
 let newTotal = 0
 
 
-rollButton.addEeventListener("click", function () {
+rollButton.addEventListener("click", function () {
 
     // 1. Get the value of the input text box and assign it
 
@@ -21,7 +21,7 @@ rollButton.addEeventListener("click", function () {
         console.log(diceRoll);
         counter++
         dieRollsArray.push(diceRoll)
-        newtotal += diceRoll
+        newTotal += diceRoll
 
     }
     total.innerHTML = newTotal
@@ -34,6 +34,18 @@ rollButton.addEeventListener("click", function () {
 showRollsButton.addEventListener("click", function () {
     let counter = 0
     while (counter < dieRollsArray.length) {
-        counter +=
-   }
-}
+        counter += 1
+    }
+})
+
+/* function sumDiceRolls() {
+    let total = 0
+    let index = 0
+    while (index < diceRolls.length) {
+        total = total + diceRolls[index]
+
+        index++
+    }
+
+    return total
+*/
